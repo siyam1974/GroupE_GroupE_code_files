@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes | Titan Gym</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="classes.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="gym-logo.png" alt="Titan Gym logo" />
+          </a>
+        </div>
+
+        <div class="main-menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+            <li>
+              <a href="classes.html" class="active">Classes</a>
+            </li>
+            <li>
+              <a href="trainers.html">Trainers</a>
+            </li>
+            <li>
+              <a class="btn" href="login.html"> <i class="fas fa-user"></i> Member Login </a>
+            </li>
+          </ul>
+        </div>
+        <button class="hamburger-button">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </button>
+        <div class="mobile-menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+            <li>
+              <a href="classes.html" class="active">Classes</a>
+            </li>
+            <li>
+              <a href="trainers.html">Trainers</a>
+            </li>
+            <li>
+              <a class="btn" href="login.html"> <i class="fas fa-user"></i> Member Login </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-heading text-xxl">Our Classes</h1>
+        <p class="hero-text">
+          Find the perfect workout for your fitness level and goals
+        </p>
+      </div>
+    </section>
+
+    <!-- Class Categories -->
+    <section class="class-categories bg-light">
+      <div class="container">
+        <h2 class="text-xl text-center">Class Categories</h2>
+        <div class="category-tabs">
+          <button class="category-tab active" data-category="all">All Classes</button>
+          <button class="category-tab" data-category="strength">Strength</button>
+          <button class="category-tab" data-category="cardio">Cardio</button>
+          <button class="category-tab" data-category="flexibility">Flexibility</button>
+          <button class="category-tab" data-category="hiit">HIIT</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Class Schedule -->
+    <section class="class-schedule">
+      <div class="container">
+        <div class="schedule-header">
+          <h2 class="text-xl">Weekly Class Schedule</h2>
+          <div class="schedule-actions">
+            <button id="prev-week" class="btn btn-outline"><i class="fas fa-chevron-left"></i></button>
+            <span id="week-display">Current Week</span>
+            <button id="next-week" class="btn btn-outline"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+        
+        <div class="schedule-table">
+          <!-- This will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Classes -->
+    <section class="popular-classes bg-black">
+      <div class="container">
+        <h2 class="text-xl text-center">Popular Classes</h2>
+        <div class="classes-grid">
+          <!-- Class cards will be here -->
+          <div class="class-card" data-category="hiit">
+            <div class="class-image">
+              <img src="images/hiit-class.jpg" alt="HIIT Class" />
+              <span class="class-level">Advanced</span>
+            </div>
+            <div class="class-info">
+              <h3>Extreme HIIT</h3>
+              <div class="class-meta">
+                <span><i class="fas fa-clock"></i> 45 mins</span>
+                <span><i class="fas fa-calendar-alt"></i> Mon, Wed, Fri</span>
+              </div>
+              <p>High-intensity interval training that pushes your limits and burns maximum calories.</p>
+              <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
+          
+          <div class="class-card" data-category="strength">
+            <div class="class-image">
+              <img src="images/strength-class.jpg" alt="Strength Training" />
+              <span class="class-level">All Levels</span>
+            </div>
+            <div class="class-info">
+              <h3>Total Body Strength</h3>
+              <div class="class-meta">
+                <span><i class="fas fa-clock"></i> 60 mins</span>
+                <span><i class="fas fa-calendar-alt"></i> Tue, Thu, Sat</span>
+              </div>
+              <p>Build lean muscle and increase strength with compound movements and progressive overload.</p>
+              <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
+          
+          <div class="class-card" data-category="flexibility">
+            <div class="class-image">
+              <img src="images/yoga-class.jpg" alt="Yoga Class" />
+              <span class="class-level">Beginner</span>
+            </div>
+            <div class="class-info">
+              <h3>Power Yoga</h3>
+              <div class="class-meta">
+                <span><i class="fas fa-clock"></i> 60 mins</span>
+                <span><i class="fas fa-calendar-alt"></i> Daily</span>
+              </div>
+              <p>Improve flexibility, balance, and mental focus with this dynamic yoga practice.</p>
+              <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta bg-primary">
+      <div class="container-sm">
+        <div class="cta-content">
+          <h2 class="text-xl">Not Sure Which Class Is Right For You?</h2>
+          <p>Our trainers can help you find the perfect class based on your goals and fitness level.</p>
+          <a href="#" class="btn btn-dark">Get a Free Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-black">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="index.html">
+              <img src="images/logo-white.png" alt="Titan Gym logo" />
+            </a>
+            <div class="card">
+              <h4>Join Our Newsletter</h4>
+              <p class="text-sm">
+                Get class updates and special offers.
+              </p>
+              <form>
+                <input type="email" placeholder="Enter your email" />
+                <button type="submit" class="btn btn-primary btn-block">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="classes.html">Classes</a></li>
+              <li><a href="trainers.html">Trainers</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Class Types</h4>
+            <ul>
+              <li><a href="#">Strength Training</a></li>
+              <li><a href="#">Cardio</a></li>
+              <li><a href="#">Yoga & Pilates</a></li>
+              <li><a href="#">HIIT</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li>35A Sidney Street, E1 2HH</li>
+              <li>07405107848</li>
+              <li>
+                <a href="titangym19@gmail.com">info@titangyme.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Titan Gym. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="classes.js"></script>
+  </body>
+</html>
